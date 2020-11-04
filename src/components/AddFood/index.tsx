@@ -28,7 +28,7 @@ interface IModalProps {
   handleAddFood: (food: Omit<IFoodPlate, 'id' | 'available'>) => void;
 }
 
-const ModalAddFood: React.FC<IModalProps> = ({
+const AddFood: React.FC<IModalProps> = ({
   isOpen,
   setIsOpen,
   handleAddFood,
@@ -49,8 +49,8 @@ const ModalAddFood: React.FC<IModalProps> = ({
         <h1>Novo Prato</h1>
         <Input name="image" placeholder="Cole o link aqui" />
 
-        <Input name="name" placeholder="Ex: Moda Italiana" />
-        <Input name="price" placeholder="Ex: 19.90" />
+        <Input name="name" placeholder="Comida" />
+        <Input name="price" placeholder="R$" />
 
         <Input name="description" placeholder="Descrição" />
         <button type="submit" data-testid="add-food-button">
@@ -64,4 +64,4 @@ const ModalAddFood: React.FC<IModalProps> = ({
   );
 };
 
-export default ModalAddFood;
+export default AddFood;
